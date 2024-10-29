@@ -10,6 +10,9 @@
 # [deploy a new version of the app by pushing a release tag to the repo]
 # fly deploy --config fly.stage.toml --app galv-backend-stage
 # fly storage create --config fly.stage.toml --app galv-backend-stage
+#
+# To update the app from a new release tag, use
+# fly deploy --config fly.stage.toml --app galv-backend-stage
 
 app = "galv-backend-stage"
 primary_region = "lhr"
