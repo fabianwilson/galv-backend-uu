@@ -237,6 +237,7 @@ class CustomPropertiesModelSerializer(serializers.HyperlinkedModelSerializer):
             "read": {"type": "boolean"},
             "write": {"type": "boolean"},
             "create": {"type": "boolean"},
+            "destroy": {"type": "boolean"},
         },
     }
 )

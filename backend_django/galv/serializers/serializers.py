@@ -8,7 +8,6 @@ import os.path
 from pathlib import Path
 import re
 import tempfile
-from typing import Union
 
 import jsonschema
 from django.conf import settings
@@ -2062,21 +2061,21 @@ class ObservedFileSerializer(
         help_text="First few rows of this file's data"
     )
 
-    def get_applicable_mappings(self, instance) -> str:
+    def get_applicable_mappings(self, instance):
         return reverse(
             "observedfile-applicable-mappings",
             args=[instance.pk],
             request=self.context.get("request"),
         )
 
-    def get_extra_metadata(self, instance) -> Union[dict, None]:
+    def get_extra_metadata(self, instance):
         return reverse(
             "observedfile-extra-metadata",
             args=[instance.pk],
             request=self.context.get("request"),
         )
 
-    def get_summary(self, instance) -> Union[dict, None]:
+    def get_summary(self, instance):
         return reverse(
             "observedfile-summary",
             args=[instance.pk],
